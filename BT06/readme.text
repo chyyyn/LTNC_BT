@@ -1,0 +1,23 @@
+1.  #include <iostream>
+
+    using namespace std;
+
+    void f(int arr[]) {
+        cout << "Dia chi mang : " << &arr << endl;
+        cout << "Dia chi phan tu dau tien trong mang : " << &arr[0] << endl;
+    }
+
+    int main() {
+        int A[] = {1, 2, 3, 4, 5};
+
+        cout << "Dia chimang A: " << &A << endl;
+        cout << "Dia chi phan tu dau tien trong mang cua A: " << &A[0] << endl;
+
+        f(A);
+
+        return 0;
+    }
+2. gọi hàm này nó sẽ gọi lại nó rồi không bao giờ trả về
+3. sẽ lặp vô hạn nếu nó là một tham số khác 1
+4. sau khi trở thành giá trị 5000 nó gây lỗi StackoverflowError
+6. khi nhập giá trị n = 1 xảy ra lỗi
