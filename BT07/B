@@ -1,0 +1,31 @@
+1.
+	char c = ‘A', d = ‘B';
+	char* p1 = &c;
+	char* p2 = &d;
+	char* p3;
+
+	p3 = &d;
+	cout << “*p3 = “ << *p3 << “, p3 = “ << p3 << endl;
+	p3 = p1;
+	cout << “*p3 = “ << *p3 << “, p3 = “ << p3 << endl;
+	*p1 = *p2;
+	cout << “*p1 = “ << *p1 << “, p1 = “ << p1 << endl;
+
+input: &c = 0x1234; &d = 0x5678
+output: *p3 = B, p3 = 0x5678 
+	  *p3 = A, p3 = 0x1234 
+        *p1 = B, p1 = 0x5678
+
+2.
+	int *p;
+	int i;
+	int k;
+	i = 4;
+	k = i;
+	p = &i;
+lệnh gán cho i giá trị 5 là: *p = 5;
+
+3.
+	char c = ‘C';
+	double *p = &c;
+con trỏ là dạng con trỏ double nên không thể trỏ đến biến char
